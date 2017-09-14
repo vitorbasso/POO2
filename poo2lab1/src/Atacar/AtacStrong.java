@@ -10,8 +10,7 @@ package Atacar;
  * @author vitor
  */
 public class AtacStrong extends Atac{
-    @Override
-    public void atacar(){
-        System.out.println("Ataque Forte\n");
+    public AtacStrong(){
+        super("Forte");
     }
 }

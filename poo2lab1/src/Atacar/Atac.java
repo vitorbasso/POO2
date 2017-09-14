@@ -10,5 +10,16 @@ package Atacar;
  * @author vitor
  */
 public abstract class Atac {
-    public abstract void atacar();
+    private String power;
+    
+    public Atac(String poder){
+        setPower(poder);
+    }
+    
+    public String getPower(){
+        return this.power;
+    }
+    public void setPower(String poder){
+        this.power = poder;
+    }
 }

@@ -79,7 +79,7 @@ public class Personagem{
     }
    
     public void getAtac(){
-        atacStr.atacar();
+        System.out.println("Ataque " + atacStr.getPower());
     }
    
     public void setJump(Jump newJump){

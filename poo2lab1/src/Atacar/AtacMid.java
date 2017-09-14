@@ -10,8 +10,7 @@ package Atacar;
  * @author vitor
  */
 public class AtacMid extends Atac{
-    @Override
-    public void atacar(){
-        System.out.println("Ataque Medio\n");
+    public AtacMid(){
+        super("Medio");
     }
 }
