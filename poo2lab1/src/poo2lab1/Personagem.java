@@ -60,12 +60,20 @@ public class Personagem{
         }
     }
     
+    public void setObservers(ArrayList<ObservingEnemy> observer){
+        this.observers = observer;
+    }
+    
+    public ArrayList<ObservingEnemy> getObservers(){
+        return this.observers;
+    }
+    
     public void addObserver(ObservingEnemy observer){
-        observers.add(observer);
+        this.observers.add(observer);
     }
     
     public void removeObserver(ObservingEnemy observer){
-        observers.remove(observer);
+        this.observers.remove(observer);
     }
     
     public void sendObserverFlag(int x, int y){
@@ -75,26 +83,30 @@ public class Personagem{
     
     
     public void setAtac(Atac newAtac){
-        atacStr = newAtac;
+        this.atacStr = newAtac;
     }
    
-    public void getAtac(){
-        System.out.println("Ataque " + atacStr.getPower());
+    public Atac getAtac(){
+        return this.atacStr;
+    }
+    
+    public void attack(){
+        System.out.println("Ataque " + this.atacStr.getPower());
     }
    
     public void setJump(Jump newJump){
-        jumpHeight = newJump;
+        this.jumpHeight = newJump;
     }
    
     public void getJump(){
-        jumpHeight.pular();
+        this.jumpHeight.pular();
     }
 
     public void setRun(Run newRun){
-        runSpeed = newRun;
+        this.runSpeed = newRun;
     }
     
     public void getRun(){
-        runSpeed.correr();
+        this.runSpeed.correr();
     }
 }

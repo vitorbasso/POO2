@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package poo2lab1;
+import Atacar.*;
 
 /**
  *
@@ -26,17 +27,35 @@ public class Poo2lab1 {
         ObservingEnemy enemy3 = new Enemy3("Cavaleiro maligno");
         
         System.out.println("Personagem 1: \n");
-        principal.getAtac();
+        principal.attack();
+        principal.getJump();
+        principal.getRun();
+        
+        System.out.println("Personagem 1 depois de decorar o ataque: \n");
+        principal.setAtac(new AtacFireBall(principal.getAtac()));
+        principal.attack();
         principal.getJump();
         principal.getRun();
         
         System.out.println("\nPersonagem 2: \n");
-        principal2.getAtac();
+        principal2.attack();
+        principal2.getJump();
+        principal2.getRun();
+        
+        System.out.println("Personagem 2 depois de decorar o ataque: \n");
+        principal2.setAtac(new LightningBolt(principal2.getAtac()));
+        principal2.attack();
         principal2.getJump();
         principal2.getRun();
         
         System.out.println("\nPersonagem 3: \n");
-        principal3.getAtac();
+        principal3.attack();
+        principal3.getJump();
+        principal3.getRun();
+        
+        System.out.println("Personagem 3 depois de decorar o ataque: \n");
+        principal3.setAtac(new StoneWall(principal3.getAtac()));
+        principal3.attack();
         principal3.getJump();
         principal3.getRun();
         
