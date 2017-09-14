@@ -3,19 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Correr/RunFast.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Atacar/AtacStrong.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Pular/JumpHigh.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Atacar/AtacMid.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Correr/RunMid.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/poo2lab1/Persona2.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Correr/RunSlow.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/poo2lab1/Personagem.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Pular/JumpMid.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/poo2lab1/Persona3.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/poo2lab1/Poo2lab1.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Pular/JumpLow.java</file>
-            <file>file:/C:/Users/vitor/Documents/NetBeansProjects/poo2lab1/src/Atacar/AtacWeak.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Persona1.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Enemy1.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Enemy3.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Enemy2.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Persona2.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Personagem.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/ObservingEnemy.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Persona3.java</file>
+            <file>file:/C:/Users/vitor/OneDrive/Documents/GitHub/POO2/poo2lab1/src/poo2lab1/Poo2lab1.java</file>
         </group>
     </open-files>
 </project-private>

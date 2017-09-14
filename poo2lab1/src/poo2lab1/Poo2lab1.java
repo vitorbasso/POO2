@@ -17,9 +17,13 @@ public class Poo2lab1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Persona1 principal = new Persona1();
-        Persona2 principal2 = new Persona2();
-        Persona3 principal3 = new Persona3();
+        Persona1 principal = new Persona1("Mago", 0, 0);
+        Persona2 principal2 = new Persona2("Cavaleiro", 0, 0);
+        Persona3 principal3 = new Persona3("Arqueiro", 0, 0);
+        
+        Enemy1 enemy1 = new Enemy1("Arqueiro maligno");
+        Enemy2 enemy2 = new Enemy2("Mago maligno");
+        Enemy3 enemy3 = new Enemy3("Cavaleiro maligno");
         
         System.out.println("Personagem 1: \n");
         principal.getAtac();
@@ -35,6 +39,19 @@ public class Poo2lab1 {
         principal3.getAtac();
         principal3.getJump();
         principal3.getRun();
+        
+        principal.addObserver(enemy1);
+        principal2.addObserver(enemy1);
+        principal2.addObserver(enemy2);
+        principal3.addObserver(enemy1);
+        principal3.addObserver(enemy2);
+        principal3.addObserver(enemy3);
+        
+        principal.alterPos(1, 2);
+        principal2.alterPos(3,4);
+        principal3.alterPos(0, 1);
+        
+        
         
     }
     

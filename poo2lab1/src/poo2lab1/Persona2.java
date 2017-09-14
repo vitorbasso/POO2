@@ -14,7 +14,10 @@ import Pular.JumpHigh;
  * @author vitor
  */
 public class Persona2 extends Personagem{
-    public Persona2(){
+    public Persona2(String name, int x, int y){
+        
+        super(name, x, y);
+        
         setAtac(new AtacMid());
         setRun(new RunFast());
         setJump(new JumpHigh());

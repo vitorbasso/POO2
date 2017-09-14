@@ -14,7 +14,10 @@ import Pular.JumpLow;
  * @author vitor
  */
 public class Persona3 extends Personagem{
-    public Persona3(){
+    public Persona3(String name, int x, int y){
+        
+        super(name, x, y);
+                
         setAtac(new AtacStrong());
         setRun(new RunFast());
         setJump(new JumpLow());

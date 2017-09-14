@@ -15,7 +15,10 @@ import Correr.RunMid;
  */
 public class Persona1 extends Personagem{
     
-    public Persona1 (){
+    public Persona1 (String name, int x, int y){
+        
+        super(name, x, y);
+            
         setAtac(new AtacStrong());
         setRun(new RunMid());
         setJump(new JumpMid());
