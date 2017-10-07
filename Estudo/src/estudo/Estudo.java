@@ -5,6 +5,7 @@
  */
 package estudo;
 import Personagem.*;
+import Enemy.*;
 
 /**
  *
@@ -36,6 +37,21 @@ public class Estudo {
         personagem3.correr();
         personagem3.pular();
         personagem3.atacar();
+        
+        Enemy enemy1 = new Enemy1(personagem1);
+        Enemy enemy2 = new Enemy2(personagem1);
+        Enemy enemy3 = new Enemy3(personagem1);
+        
+        System.out.println("\n");
+        personagem1.setPosition(1, 1);
+        System.out.println("\n");
+        personagem2.setPosition(2,2);
+        
+        enemy2.setObservable(personagem2);
+        
+        personagem2.setPosition(2,2);
+        personagem2.setPosition(3,2);
+        
         
     }
     
