@@ -96,15 +96,19 @@ public abstract class Persona implements Observable{
     }
     
     public void atacar(){
-        ataque.atacar();
+        this.ataque.atacar();
+    }
+    
+    public AtaqueInterface getAtaque(){
+        return this.ataque;
     }
     
     public void pular(){
-        pulo.pular();
+        this.pulo.pular();
     }
     
     public void correr(){
-        corrida.correr();
+        this.corrida.correr();
     }
     
     

@@ -3,17 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ataque;
+package AtaqueDecorator;
+import Ataque.AtaqueInterface;
 
 /**
  *
  * @author vitor
  */
-public class AtaqueForte implements AtaqueInterface{
+public abstract class AtaqueDecorator implements AtaqueInterface{
+    protected AtaqueInterface ataque;
     private String description;
     
-    public AtaqueForte(){
-        setDescription("Ataque Forte");
+    public AtaqueDecorator(AtaqueInterface ataque, String description){
+        this.ataque = ataque;
+        setDescription(description);
     }
     
     public void setDescription(String description){
@@ -26,8 +29,7 @@ public class AtaqueForte implements AtaqueInterface{
     
     @Override
     public void atacar(){
-        System.out.println(getDescription());
+        System.out.println(ataque.getDescription() + this.getDescription());
     }
-
     
 }

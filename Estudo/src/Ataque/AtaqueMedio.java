@@ -10,10 +10,23 @@ package Ataque;
  * @author vitor
  */
 public class AtaqueMedio implements AtaqueInterface{
+    private String description;
+    
+    public AtaqueMedio(){
+        setDescription("Ataque Medio");
+    }
+    
+     public void setDescription(String description){
+        this.description = description;
+    }
+    
+    public String getDescription(){
+        return this.description;
+    }
     
     @Override
     public void atacar(){
-        System.out.println("Ataque Medio");
+        System.out.println(getDescription());
     }
     
 }

@@ -6,6 +6,7 @@
 package estudo;
 import Personagem.*;
 import Enemy.*;
+import AtaqueDecorator.*;
 
 /**
  *
@@ -51,6 +52,15 @@ public class Estudo {
         
         personagem2.setPosition(2,2);
         personagem2.setPosition(3,2);
+        
+        System.out.println("Decorando ataque do personagem 3:");
+        personagem3.setAtaque(new AtaqueDecoratorFire(personagem3.getAtaque()));
+        personagem3.atacar();
+        
+        System.out.println("Decorando ataque do personagem 2:");
+        personagem2.setAtaque(new AtaqueDecoratorIce(personagem2.getAtaque()));
+        personagem2.atacar();
+        
         
         
     }

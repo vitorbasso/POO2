@@ -11,4 +11,5 @@ package Ataque;
  */
 public interface AtaqueInterface {
     public abstract void atacar();
+    public abstract String getDescription();
 }
