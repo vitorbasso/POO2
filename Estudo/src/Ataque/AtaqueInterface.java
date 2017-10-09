@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package Ataque;
+import Personagem.Persona;
 
 /**
  *
  * @author vitor
  */
 public interface AtaqueInterface {
-    public abstract void atacar();
+    public abstract void atacar(Persona persona);
     public abstract String getDescription();
+    public abstract int getDano();
 }

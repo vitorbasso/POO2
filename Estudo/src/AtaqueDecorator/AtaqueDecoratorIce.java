@@ -13,7 +13,7 @@ import Ataque.AtaqueInterface;
 public class AtaqueDecoratorIce extends AtaqueDecorator{
     
     public AtaqueDecoratorIce(AtaqueInterface ataque){
-        super(ataque, " de Gelo", Element.ICE);
+        super(ataque, " de Gelo", Element.ICE, 3);
     }
     
 }

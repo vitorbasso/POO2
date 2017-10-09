@@ -12,6 +12,6 @@ import Ataque.AtaqueInterface;
  */
 public class AtaqueDecoratorBolt extends AtaqueDecorator{
     public AtaqueDecoratorBolt(AtaqueInterface ataque){
-        super(ataque, " de Eletricidade", Element.BOLT);
+        super(ataque, " de Eletricidade", Element.BOLT, 2);
     }
 }

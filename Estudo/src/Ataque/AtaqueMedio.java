@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Ataque;
+import Personagem.Persona;
 
 /**
  *
@@ -11,9 +12,20 @@ package Ataque;
  */
 public class AtaqueMedio implements AtaqueInterface{
     private String description;
+    private int dano;
     
     public AtaqueMedio(){
         setDescription("Ataque Medio");
+        setDano(5);
+    }
+    
+    public void setDano(int dano){
+        this.dano = dano;
+    }
+    
+    @Override
+    public int getDano(){
+        return this.dano;
     }
     
      public void setDescription(String description){
@@ -25,8 +37,9 @@ public class AtaqueMedio implements AtaqueInterface{
     }
     
     @Override
-    public void atacar(){
+    public void atacar(Persona persona){
         System.out.println(getDescription());
+        persona.tomarDano(this.getDano());
     }
     
 }

@@ -52,6 +52,7 @@ public abstract class Persona implements Observable{
         if(newVida < 0)
             newVida = 0;
         setPontosVida(newVida);
+        System.out.println("Tomou " + dano + " de dano. Ficou com " + getPontosVida() + " pontos de vida.");
     }
     
     @Override
@@ -114,7 +115,7 @@ public abstract class Persona implements Observable{
     }
     
     public void atacar(){
-        this.ataque.atacar();
+        this.ataque.atacar(this);
     }
     
     public AtaqueInterface getAtaque(){
