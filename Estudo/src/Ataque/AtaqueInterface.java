@@ -5,6 +5,7 @@
  */
 package Ataque;
 import Personagem.Persona;
+import AtaqueDecorator.Element;
 
 /**
  *
@@ -14,4 +15,5 @@ public interface AtaqueInterface {
     public abstract void atacar(Persona persona);
     public abstract String getDescription();
     public abstract int getDano();
+    public abstract Element getElemento();
 }

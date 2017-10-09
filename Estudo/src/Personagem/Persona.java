@@ -24,10 +24,11 @@ public abstract class Persona implements Observable{
     private PuloInterface pulo;
     private ArrayList<Observer> observers;
     private int pontosVida;
+    private String nome;
     
     private int x,y;
     
-    public Persona(AtaqueInterface a, CorrerInterface c, PuloInterface p){
+    public Persona(AtaqueInterface a, CorrerInterface c, PuloInterface p, String name){
         observers = new ArrayList();
         setAtaque(a);
         setCorrer(c);
@@ -35,6 +36,15 @@ public abstract class Persona implements Observable{
         setX(0);
         setY(0);
         setPontosVida(100);
+        setNome(name);
+    }
+    
+    public void setNome(String name){
+        this.nome = name;
+    }
+    
+    public String getNome(){
+        return this.nome;
     }
     
     public int getPontosVida(){
@@ -52,7 +62,14 @@ public abstract class Persona implements Observable{
         if(newVida < 0)
             newVida = 0;
         setPontosVida(newVida);
-        System.out.println("Tomou " + dano + " de dano. Ficou com " + getPontosVida() + " pontos de vida.");
+        System.out.println(this.getNome() + " tomou " + dano + " de dano. Ficou com " + getPontosVida() + " pontos de vida.");
+        if(getPontosVida() == 0){
+            System.out.println(this.getNome() + " morreu.");
+        }
+    }
+    
+    public void receberAtaque(int dano, AtaqueInterface ataque){
+        tomarDano(dano);
     }
     
     @Override
@@ -114,8 +131,9 @@ public abstract class Persona implements Observable{
         this.pulo = p;
     }
     
-    public void atacar(){
-        this.ataque.atacar(this);
+    public void atacar(Persona persona){
+        System.out.println(this.getNome() + " atacou " + persona.getNome() + " e...");
+        this.ataque.atacar(persona);
     }
     
     public AtaqueInterface getAtaque(){

@@ -14,8 +14,8 @@ import Pulo.PuloMedio;
  */
 public class Persona1 extends Persona{
     
-    public Persona1(){
-        super(new AtaqueForte(), new CorrerMedio(), new PuloMedio());
+    public Persona1(String nome){
+        super(new AtaqueForte(), new CorrerMedio(), new PuloMedio(), nome);
     }
     
 }

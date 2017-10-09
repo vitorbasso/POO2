@@ -10,5 +10,5 @@ package AtaqueDecorator;
  * @author vitor
  */
 public enum Element {
-    FIRE, ICE, BOLT
+    FIRE, ICE, BOLT, SEM_ELEMENTO
 }

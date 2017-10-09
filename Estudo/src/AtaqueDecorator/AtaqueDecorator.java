@@ -47,9 +47,15 @@ public abstract class AtaqueDecorator implements AtaqueInterface{
     }
     
     @Override
+    public Element getElemento(){
+        return this.elemento;
+    }
+    
+    @Override
     public void atacar(Persona persona){
         System.out.println(getDescription());
-        persona.tomarDano(this.getDano());
+        persona.receberAtaque(this.getDano(), this);
+        
     }
     
 }

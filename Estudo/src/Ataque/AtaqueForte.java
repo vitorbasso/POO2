@@ -5,6 +5,7 @@
  */
 package Ataque;
 import Personagem.Persona;
+import AtaqueDecorator.Element;
 
 /**
  *
@@ -13,10 +14,18 @@ import Personagem.Persona;
 public class AtaqueForte implements AtaqueInterface{
     private String description;
     private int dano;
+    private Element elemento;
+    
     
     public AtaqueForte(){
         setDescription("Ataque Forte");
         setDano(10);
+        this.elemento = Element.SEM_ELEMENTO;
+    }
+    
+    @Override
+    public Element getElemento(){
+        return this.elemento;
     }
     
     public void setDano(int dano){
@@ -39,7 +48,7 @@ public class AtaqueForte implements AtaqueInterface{
     @Override
     public void atacar(Persona persona){
         System.out.println(getDescription());
-        persona.tomarDano(this.getDano());
+        persona.receberAtaque(this.getDano(), this);
     }
 
     

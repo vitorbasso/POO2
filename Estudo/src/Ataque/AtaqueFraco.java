@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Ataque;
+import AtaqueDecorator.Element;
 import Personagem.Persona;
 
 /**
@@ -14,10 +15,18 @@ public class AtaqueFraco implements AtaqueInterface{
     
     private String description;
     private int dano;
+    private Element elemento;
     
     public AtaqueFraco(){
         setDescription("Ataque Fraco");
         setDano(2);
+        this.elemento = Element.SEM_ELEMENTO;
+        
+    }
+    
+    @Override
+    public Element getElemento(){
+        return this.elemento;
     }
     
     public void setDano(int dano){
@@ -40,7 +49,7 @@ public class AtaqueFraco implements AtaqueInterface{
     @Override
     public void atacar(Persona persona){
         System.out.println(getDescription());
-        persona.tomarDano(this.getDano());
+        persona.receberAtaque(this.getDano(), this);
     }
     
 }
