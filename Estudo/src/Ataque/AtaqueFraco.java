@@ -49,7 +49,7 @@ public class AtaqueFraco implements AtaqueInterface{
     @Override
     public void atacar(Persona persona){
         System.out.println(getDescription());
-        persona.receberAtaque(this.getDano(), this);
+        persona.receberAtaque(this);
     }
     
 }

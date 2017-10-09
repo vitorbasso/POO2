@@ -15,10 +15,20 @@ import Personagem.Persona;
 public abstract class Escudo {
     protected Escudo next;
     protected Element elemento;
+    private String nome;
     
-    public Escudo(Element elem){
+    public Escudo(Element elem, String name){
         this.next = null;
         this.setElemento(elem);
+        this.setNome(name);
+    }
+    
+    public void setNome(String name){
+        this.nome = name;
+    }
+    
+    public String getNome(){
+        return this.nome;
     }
     
     public void setElemento(Element elem){
@@ -41,12 +51,15 @@ public abstract class Escudo {
         return getElemento() == elem;
     }
     
-    public void defender(AtaqueInterface ataque, Persona persona) throws Exception{
+    public int defender(AtaqueInterface ataque){
         if(podeDefender(ataque.getElemento())){
-            System.out.println("Ataque defendido pelo escudo");
+            System.out.println(ataque.getDescription() + " bloqueado por " + getNome() + ".");
+            return 0;
         }else{
             if(next == null){
-                
+                return ataque.getDano();
+            }else{
+                return next.defender(ataque);
             }
         }
     }

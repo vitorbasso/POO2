@@ -68,8 +68,8 @@ public abstract class Persona implements Observable{
         }
     }
     
-    public void receberAtaque(int dano, AtaqueInterface ataque){
-        tomarDano(dano);
+    public void receberAtaque(AtaqueInterface ataque){
+        tomarDano(ataque.getDano());
     }
     
     @Override
