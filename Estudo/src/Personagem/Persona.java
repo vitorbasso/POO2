@@ -23,6 +23,7 @@ public abstract class Persona implements Observable{
     private CorrerInterface corrida;
     private PuloInterface pulo;
     private ArrayList<Observer> observers;
+    private int pontosVida;
     
     private int x,y;
     
@@ -33,7 +34,24 @@ public abstract class Persona implements Observable{
         setPulo(p);
         setX(0);
         setY(0);
-        
+        setPontosVida(100);
+    }
+    
+    public int getPontosVida(){
+        return this.pontosVida;
+    }
+    
+    public void setPontosVida(int pontos){
+        this.pontosVida = pontos;
+        if(this.pontosVida == 0)
+            System.out.println("Personagem Morreu");
+    }
+    
+    public void tomarDano(int dano){
+        int newVida = getPontosVida() - dano;
+        if(newVida < 0)
+            newVida = 0;
+        setPontosVida(newVida);
     }
     
     @Override
