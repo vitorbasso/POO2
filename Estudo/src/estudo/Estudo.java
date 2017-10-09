@@ -7,6 +7,7 @@ package estudo;
 import Personagem.*;
 import Enemy.*;
 import AtaqueDecorator.*;
+import Escudo.*;
 
 /**
  *

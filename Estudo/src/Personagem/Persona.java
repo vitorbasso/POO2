@@ -11,6 +11,7 @@ import Correr.CorrerInterface;
 import Observer.Observable;
 import Observer.Observer;
 import java.util.ArrayList;
+import Escudo.Escudo;
 
 
 /**
@@ -25,6 +26,7 @@ public abstract class Persona implements Observable{
     private ArrayList<Observer> observers;
     private int pontosVida;
     private String nome;
+    private Escudo escudos;
     
     private int x,y;
     
@@ -37,6 +39,15 @@ public abstract class Persona implements Observable{
         setY(0);
         setPontosVida(100);
         setNome(name);
+        escudos = null;
+    }
+    
+    public void addEscudo(Escudo esc){
+        if(escudos == null){
+            escudos = esc;
+        }else{
+            escudos.setNext(esc);
+        }
     }
     
     public void setNome(String name){
@@ -69,6 +80,9 @@ public abstract class Persona implements Observable{
     }
     
     public void receberAtaque(AtaqueInterface ataque){
+        if(escudos != null)
+            escudos.defender(ataque);
+        
         tomarDano(ataque.getDano());
     }
     
