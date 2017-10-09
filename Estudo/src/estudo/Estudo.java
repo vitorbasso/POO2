@@ -55,10 +55,15 @@ public class Estudo {
         personagem2.setPosition(3,2);
         
         System.out.println("Decorando ataque do personagem 3:");
+        personagem2.addEscudo(new EscudoGelo());
+        personagem2.addEscudo(new EscudoFogo());
+        personagem2.addEscudo(new EscudoEletricidade());
         personagem3.setAtaque(new AtaqueDecoratorFire(personagem3.getAtaque()));
         personagem3.atacar(personagem2);
         
         System.out.println("Decorando ataque do personagem 2:");
+        personagem3.addEscudo(new EscudoFogo());
+        personagem3.addEscudo(new EscudoEletricidade());
         personagem2.setAtaque(new AtaqueDecoratorIce(personagem2.getAtaque()));
         personagem2.atacar(personagem3);
         

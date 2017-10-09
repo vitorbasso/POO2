@@ -80,10 +80,11 @@ public abstract class Persona implements Observable{
     }
     
     public void receberAtaque(AtaqueInterface ataque){
+        int dano = ataque.getDano();
         if(escudos != null)
-            escudos.defender(ataque);
+            dano = escudos.defender(ataque);
         
-        tomarDano(ataque.getDano());
+        tomarDano(dano);
     }
     
     @Override
