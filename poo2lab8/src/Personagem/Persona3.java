@@ -5,9 +5,9 @@
  */
 package Personagem;
 
-import Ataque.AtaqueForte;
-import Correr.CorrerForte;
-import Pulo.PuloFraco;
+import Ataque.*;
+import Correr.*;
+import Pulo.*;
 
 /**
  *
@@ -15,8 +15,8 @@ import Pulo.PuloFraco;
  */
 public class Persona3 extends Persona{
     
-    public Persona3(String nome){
-        super(new AtaqueForte(), new CorrerForte(), new PuloFraco(), nome);
+    public Persona3(String nome, AtaqueInterface ataque, CorrerInterface correr, PuloInterface pulo){
+        super(ataque, correr, pulo, nome);
     }
     
 }

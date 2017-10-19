@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package Personagem;
-import Ataque.AtaqueForte;
-import Correr.CorrerMedio;
-import Pulo.PuloMedio;
+import Ataque.*;
+import Correr.*;
+import Pulo.*;
 
 /**
  *
@@ -14,8 +14,8 @@ import Pulo.PuloMedio;
  */
 public class Persona1 extends Persona{
     
-    public Persona1(String nome){
-        super(new AtaqueForte(), new CorrerMedio(), new PuloMedio(), nome);
+    public Persona1(String nome, AtaqueInterface ataque, CorrerInterface correr, PuloInterface pular){
+        super(ataque, correr, pular, nome);
     }
     
 }

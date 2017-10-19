@@ -47,6 +47,17 @@ public class EasyFactory implements FactoryInterface{
     public CorrerInterface criarCorrer() {
         return new CorrerForte();
     }
+    
+    @Override
+    public PuloInterface criarPulo() {
+        return new PuloForte();
+    }
+    
+    @Override
+    public Escudo[] criarEscudo() {
+        Escudo[] listaEscudos = {new EscudoEletricidade(), new EscudoFogo(), new EscudoGelo()};
+        return listaEscudos;
+    }
 
     @Override
     public Enemy criarEnemy() {
@@ -54,20 +65,9 @@ public class EasyFactory implements FactoryInterface{
     }
 
     @Override
-    public Escudo[] criarEscudo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public Persona criarPersona() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new Persona1("Player", criarAtaque(), criarCorrer(),  criarPulo());
     }
 
-    @Override
-    public PuloInterface criarPulo() {
-        return new PuloForte();
-    }
-    
-    
     
 }
