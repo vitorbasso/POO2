@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 package poo2lab8;
-import Personagem.*;
-import Enemy.*;
-import AtaqueDecorator.*;
-import Escudo.*;
+import Personagem.Persona;
+import Enemy.Enemy;
 import Factory.*;
 
 /**

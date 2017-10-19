@@ -5,13 +5,15 @@
  */
 package Factory;
 
-import Ataque.*;
-import AtaqueDecorator.*;
-import Correr.*;
-import Enemy.*;
+import Ataque.AtaqueInterface;
+import Ataque.AtaqueForte;
+import AtaqueDecorator.AtaqueDecorator;
+import AtaqueDecorator.AtaqueDecoratorFire;
+import Correr.CorrerInterface;
+import Correr.CorrerForte;
 import Escudo.*;
-import Personagem.*;
-import Pulo.*;
+import Pulo.PuloInterface;
+import Pulo.PuloForte;
 
 /**
  *
