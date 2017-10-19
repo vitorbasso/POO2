@@ -45,9 +45,9 @@ public class Poo2lab8 {
         personagem3.pular();
         personagem3.atacar(personagem1);
         
-        Enemy enemy1 = new Enemy1(personagem1);
-        Enemy enemy2 = new Enemy2(personagem1);
-        Enemy enemy3 = new Enemy3(personagem1);
+        Enemy enemy1 = factory.criarEnemy(personagem1, "Enemy 1");
+        Enemy enemy2 = factory.criarEnemy(personagem1, "Enemy 2");
+        Enemy enemy3 = factory.criarEnemy(personagem1, "Enemy 3");
         
         System.out.println("\n");
         personagem1.setPosition(1, 1);

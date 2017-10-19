@@ -17,7 +17,7 @@ import Pulo.*;
  *
  * @author vitor
  */
-public class EasyFactory implements FactoryInterface{
+public class EasyFactory extends FactoryInterface{
     private static EasyFactory uniqueInstance = null;
     
     private EasyFactory(){}
@@ -58,22 +58,5 @@ public class EasyFactory implements FactoryInterface{
         Escudo[] listaEscudos = {new EscudoEletricidade(), new EscudoFogo(), new EscudoGelo()};
         return listaEscudos;
     }
-
-    @Override
-    public Enemy criarEnemy() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Persona criarPersona(String nome) {
-        Persona personagem = new Persona1(nome, criarAtaque(), criarCorrer(),  criarPulo());
-        Escudo[] lista = criarEscudo();
-        for(int i = 0; i < lista.length; i++)
-            personagem.addEscudo(lista[i]);
-        personagem.setAtaque(criarAtaqueDecorator(personagem.getAtaque()));
-        
-        return personagem;
-    }
-
     
 }

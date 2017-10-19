@@ -12,8 +12,8 @@ import Observer.Observable;
  */
 public class Enemy1 extends Enemy{
     
-    public Enemy1(Observable obs){
-        super(obs, "Enemy1", 0, 0);
+    public Enemy1(Observable obs, String nome){
+        super(obs, nome, 0, 0);
     }
     
 }
