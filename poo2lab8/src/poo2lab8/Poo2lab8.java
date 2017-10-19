@@ -10,7 +10,8 @@ import Factory.*;
 
 /**
  *
- * @author vitor
+ * @author Vitor Martins Basso 11611BCC034
+ * @author Vitor Hugo Honorato 11521BCC003
  */
 public class Poo2lab8 {
 
