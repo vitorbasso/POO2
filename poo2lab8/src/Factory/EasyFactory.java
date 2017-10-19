@@ -65,8 +65,14 @@ public class EasyFactory implements FactoryInterface{
     }
 
     @Override
-    public Persona criarPersona() {
-        return new Persona1("Player", criarAtaque(), criarCorrer(),  criarPulo());
+    public Persona criarPersona(String nome) {
+        Persona personagem = new Persona1(nome, criarAtaque(), criarCorrer(),  criarPulo());
+        Escudo[] lista = criarEscudo();
+        for(int i = 0; i < lista.length; i++)
+            personagem.addEscudo(lista[i]);
+        personagem.setAtaque(criarAtaqueDecorator(personagem.getAtaque()));
+        
+        return personagem;
     }
 
     

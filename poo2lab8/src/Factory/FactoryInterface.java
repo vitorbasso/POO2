@@ -21,6 +21,6 @@ public interface FactoryInterface {
     public abstract CorrerInterface criarCorrer();
     public abstract Enemy criarEnemy();
     public abstract Escudo[] criarEscudo();
-    public abstract Persona criarPersona();
+    public abstract Persona criarPersona(String nome);
     public abstract PuloInterface criarPulo();
 }

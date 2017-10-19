@@ -8,6 +8,7 @@ import Personagem.*;
 import Enemy.*;
 import AtaqueDecorator.*;
 import Escudo.*;
+import Factory.*;
 
 /**
  *
@@ -19,10 +20,14 @@ public class Poo2lab8 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        FactoryInterface factory = EasyFactory.getInstance();
+        
+        
        
-        Persona personagem1 = new Persona1("Personagem 1");
-        Persona personagem2 = new Persona2("Personagem 2");
-        Persona personagem3 = new Persona3("Personagem 3");
+        Persona personagem1 = factory.criarPersona("Personagem 1");
+        Persona personagem2 = factory.criarPersona("Personagem 2");
+        Persona personagem3 = factory.criarPersona("Personagem 3");
         
         
         System.out.println(personagem1.getNome() + ":");
@@ -53,21 +58,6 @@ public class Poo2lab8 {
         
         personagem2.setPosition(2,2);
         personagem2.setPosition(3,2);
-        
-        System.out.println("Decorando ataque do personagem 3:");
-        personagem2.addEscudo(new EscudoGelo());
-        personagem2.addEscudo(new EscudoFogo());
-        personagem2.addEscudo(new EscudoEletricidade());
-        personagem3.setAtaque(new AtaqueDecoratorFire(personagem3.getAtaque()));
-        personagem3.atacar(personagem2);
-        
-        System.out.println("Decorando ataque do personagem 2:");
-        personagem3.addEscudo(new EscudoFogo());
-        personagem3.addEscudo(new EscudoEletricidade());
-        personagem2.setAtaque(new AtaqueDecoratorIce(personagem2.getAtaque()));
-        personagem2.atacar(personagem3);
-        
-        System.out.println("hello");
         
     }
     

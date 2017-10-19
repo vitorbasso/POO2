@@ -9,6 +9,6 @@ package Factory;
  *
  * @author vitor
  */
-public class HardFactory {
+public class HardFactory{
     
 }
