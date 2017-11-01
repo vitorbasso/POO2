@@ -22,7 +22,14 @@ public class Cap6POO2 {
         SimpleRemoteControl remoteControl = new SimpleRemoteControl();
         LightOnCommand lightOn = new LightOnCommand(new Light());
         
+        GarageDoorOpenCommand garageUp = new GarageDoorOpenCommand(new GarageDoor());
+        
+        
         remoteControl.setCommand(lightOn);
+        
+        remoteControl.buttonWasPressed();
+        
+        remoteControl.setCommand(garageUp);
         
         remoteControl.buttonWasPressed();
         
