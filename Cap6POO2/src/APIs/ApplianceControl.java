@@ -3,13 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package command;
+package APIs;
 
 /**
  *
  * @author vitor
  */
-public interface Command {
-    public void execute();
-    public void undo();
+public class ApplianceControl {
+    public void on(){
+        System.out.println("Appliance Control on");
+    }
+    
+    public void off(){
+        System.out.println("Appliance Control off");
+    }
 }

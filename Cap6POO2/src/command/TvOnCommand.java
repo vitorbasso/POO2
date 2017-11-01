@@ -4,28 +4,29 @@
  * and open the template in the editor.
  */
 package command;
-import APIs.Light;
+import APIs.Tv;
 
 /**
  *
  * @author vitor
  */
-public class LightOnCommand implements Command{
+public class TvOnCommand implements Command{
+    private Tv tv;
     
-    Light light;
-    
-    public LightOnCommand(Light light){
-        this.light = light;
+    public TvOnCommand(Tv tv){
+        this.tv = tv;
     }
     
     @Override
     public void execute(){
-        light.on();
+        tv.on();
+        tv.setInputChannel();
+        tv.setVolume();
     }
     
     @Override
     public void undo(){
-        this.light.off();
+        tv.off();
     }
     
 }

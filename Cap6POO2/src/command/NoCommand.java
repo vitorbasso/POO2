@@ -9,7 +9,9 @@ package command;
  *
  * @author vitor
  */
-public interface Command {
-    public void execute();
-    public void undo();
+public class NoCommand implements Command{
+    @Override
+    public void execute(){}
+    @Override
+    public void undo(){}
 }

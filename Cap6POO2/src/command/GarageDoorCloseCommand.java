@@ -4,28 +4,27 @@
  * and open the template in the editor.
  */
 package command;
-import APIs.Light;
+import APIs.GarageDoor;
 
 /**
  *
  * @author vitor
  */
-public class LightOnCommand implements Command{
+public class GarageDoorCloseCommand implements Command{
+    private GarageDoor garageDoor;
     
-    Light light;
-    
-    public LightOnCommand(Light light){
-        this.light = light;
+    public GarageDoorCloseCommand(GarageDoor garageDoor){
+        this.garageDoor = garageDoor;
     }
     
     @Override
     public void execute(){
-        light.on();
+        garageDoor.down();
     }
     
     @Override
     public void undo(){
-        this.light.off();
+        garageDoor.up();
     }
     
 }

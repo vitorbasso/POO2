@@ -4,28 +4,27 @@
  * and open the template in the editor.
  */
 package command;
-import APIs.Light;
+import APIs.FaucetControl;
 
 /**
  *
  * @author vitor
  */
-public class LightOnCommand implements Command{
+public class FaucetOpenCommand implements Command{
+    private FaucetControl faucetControl;
     
-    Light light;
-    
-    public LightOnCommand(Light light){
-        this.light = light;
+    public FaucetOpenCommand(FaucetControl faucetControl){
+        this.faucetControl = faucetControl;
     }
     
     @Override
     public void execute(){
-        light.on();
+        this.faucetControl.openValue();
     }
     
     @Override
     public void undo(){
-        this.light.off();
+        this.faucetControl.closeValue();
     }
     
 }

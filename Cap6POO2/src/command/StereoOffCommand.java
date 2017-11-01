@@ -4,28 +4,28 @@
  * and open the template in the editor.
  */
 package command;
-import APIs.Light;
+import APIs.Stereo;
 
 /**
  *
  * @author vitor
  */
-public class LightOnCommand implements Command{
+public class StereoOffCommand implements Command{
     
-    Light light;
+    private Stereo stereo;
     
-    public LightOnCommand(Light light){
-        this.light = light;
+    public StereoOffCommand(Stereo stereo){
+        this.stereo = stereo;
     }
     
     @Override
     public void execute(){
-        light.on();
+        stereo.off();
     }
     
     @Override
     public void undo(){
-        this.light.off();
+        stereo.on();
     }
     
 }
