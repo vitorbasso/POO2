@@ -25,57 +25,32 @@ public class Cap6POO2 {
        LightOnCommand lightOn = new LightOnCommand(light);
        LightOffCommand lightOff = new LightOffCommand(light);
        
-       GarageDoor garageDoor = new GarageDoor();
-       GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garageDoor);
-       GarageDoorCloseCommand garageDoorClose = new GarageDoorCloseCommand(garageDoor);
-       
-       Stereo stereo = new Stereo();
-       StereoOnWithCdCommand stereoOnWithCd = new StereoOnWithCdCommand(stereo);
-       StereoOnWithDvdCommand stereoOnWithDvd = new StereoOnWithDvdCommand(stereo);
-       StereoOnWithRadioCommand stereoOnWithRadio = new StereoOnWithRadioCommand(stereo);
-       StereoOffCommand stereoOff = new StereoOffCommand(stereo);
-       
        Tv tv = new Tv();
        TvOnCommand tvOn = new TvOnCommand(tv);
        TvOffCommand tvOff = new TvOffCommand(tv);
        
-       FaucetControl faucetControl = new FaucetControl();
-       FaucetOpenCommand faucetOpen = new FaucetOpenCommand(faucetControl);
-       FaucetCloseCommand faucetClose = new FaucetCloseCommand(faucetControl);
+       Stereo stereo = new Stereo();
+       StereoOnWithDvdCommand stereoOnDvd = new StereoOnWithDvdCommand(stereo);
+       StereoOffCommand stereoOff = new StereoOffCommand(stereo);
        
-       remoteControl.setCommand(0, lightOn, lightOff);
-       remoteControl.setCommand(1, garageDoorOpen, garageDoorClose);
-       remoteControl.setCommand(2, stereoOnWithCd, stereoOff);
-       remoteControl.setCommand(3, stereoOnWithDvd, stereoOff);
-       remoteControl.setCommand(4, stereoOnWithRadio, stereoOff);
-       remoteControl.setCommand(5, tvOn, tvOff);
-       remoteControl.setCommand(6, faucetOpen, faucetClose);
+       CellingFan cellingFan = new CellingFan("Living Room");
+       CellingFanLowCommand cellingFanLow = new CellingFanLowCommand(cellingFan);
+       CellingFanOffCommand cellingFanOff = new CellingFanOffCommand(cellingFan);
+       
+       Command[] partyOn = {lightOn, tvOn, stereoOnDvd,cellingFanLow};
+       Command[] partyOff = {cellingFanOff, stereoOff, tvOff, lightOff};
+       
+       MacroCommand partyOnMacro = new MacroCommand(partyOn);
+       MacroCommand partyOffMacro = new MacroCommand(partyOff);
+       
+       remoteControl.setCommand(0, partyOnMacro, partyOffMacro);
        
         System.out.println(remoteControl);
-        
+        System.out.println("--- Pushing Macro On ---");
         remoteControl.onButtonWasPressed(0);
+        System.out.println("--- Pushing Macro Off ---");
         remoteControl.offButtonWasPressed(0);
-        
-        remoteControl.onButtonWasPressed(1);
-        remoteControl.offButtonWasPressed(1);
-        
-        remoteControl.onButtonWasPressed(2);
-        remoteControl.offButtonWasPressed(2);
-        
-        remoteControl.onButtonWasPressed(3);
-        remoteControl.offButtonWasPressed(3);
-        
-        remoteControl.onButtonWasPressed(4);
-        remoteControl.offButtonWasPressed(4);
-        
-        remoteControl.onButtonWasPressed(5);
-        remoteControl.offButtonWasPressed(5);
-        
-        remoteControl.onButtonWasPressed(6);
-        remoteControl.offButtonWasPressed(6);
-        
-        remoteControl.onButtonWasPressed(0);
-        remoteControl.undoButtonWasPressed();
+       
         
     }
     
