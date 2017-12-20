@@ -18,13 +18,13 @@ public abstract class CaffeineBeverage {
         addCondiments();
     }
     
-    public void boilWater(){
+    final public void boilWater(){
         System.out.println("Boiling Water");
     }
     
     public abstract void brew();
     
-    public void pourInCup(){
+    final public void pourInCup(){
         System.out.println("Pouring into cup");
     }
     

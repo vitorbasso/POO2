@@ -15,8 +15,8 @@ public class Cap8POO2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Tea myTea = new Tea();
-        Coffee myCoffee = new Coffee();
+        CaffeineBeverage myTea = new Tea();
+        CaffeineBeverage myCoffee = new Coffee();
         
         myTea.prepareBeverage();
         
