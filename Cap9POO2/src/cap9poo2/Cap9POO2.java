@@ -15,7 +15,13 @@ public class Cap9POO2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+        DinerMenu dinerMenu = new DinerMenu();
+        
+        Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu);
+        
+        waitress.printMenu();
+        
     }
     
 }
