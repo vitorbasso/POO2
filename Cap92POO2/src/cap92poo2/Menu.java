@@ -7,6 +7,7 @@ package cap92poo2;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+
 /**
  *
  * @author vitor
@@ -59,6 +60,11 @@ public class Menu extends MenuComponent{
             menuComponent.print();
         }
         
+    }
+    
+    @Override
+    public Iterator createIterator(){
+        return new CompositeIterator(menuComponents.iterator());
     }
     
 }

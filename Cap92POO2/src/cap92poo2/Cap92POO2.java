@@ -53,6 +53,8 @@ public class Cap92POO2 {
         
         waitress.printMenu();
         
+        waitress.printVegetarianMenu();
+        
     }
     
 }

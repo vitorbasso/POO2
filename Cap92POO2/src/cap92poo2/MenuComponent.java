@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cap92poo2;
+import java.util.Iterator;
 
 /**
  *
@@ -40,6 +41,10 @@ public abstract class MenuComponent {
     }
     
     public void print(){
+        throw new UnsupportedOperationException();
+    }
+    
+    public Iterator createIterator(){
         throw new UnsupportedOperationException();
     }
     

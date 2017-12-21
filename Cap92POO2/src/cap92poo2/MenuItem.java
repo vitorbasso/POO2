@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cap92poo2;
+import java.util.Iterator;
 
 /**
  *
@@ -51,6 +52,11 @@ public class MenuItem extends MenuComponent{
         }
         System.out.println(", " + getPrice());
         System.out.println("-- " + getDescription());
+    }
+    
+    @Override
+    public Iterator createIterator(){
+        return new NullIterator();
     }
     
 }
