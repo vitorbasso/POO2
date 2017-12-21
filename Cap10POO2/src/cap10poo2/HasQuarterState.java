@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cap10poo2;
+import java.util.Random;
 
 /**
  *
@@ -12,6 +13,7 @@ package cap10poo2;
 public class HasQuarterState implements State{
     
     GumballMachine gumballMachine;
+    Random randomWinner = new Random(System.currentTimeMillis());
     
     public HasQuarterState(GumballMachine gumballMachine){
         this.gumballMachine = gumballMachine;
@@ -31,12 +33,24 @@ public class HasQuarterState implements State{
     @Override
     public void turnCrank(){
         System.out.println("You turned...");
-        gumballMachine.setState(gumballMachine.getSoldState());
+        int winner = randomWinner.nextInt(10);
+        if((winner == 2) && gumballMachine.getCount() > 1){
+            gumballMachine.setState(gumballMachine.getWinnerState());
+        }else{
+            gumballMachine.setState(gumballMachine.getSoldState());
+        }
+        
+        gumballMachine.getState().dispense();
     }
     
     @Override
     public void dispense(){
         System.out.println("No gumball dispensed");
+    }
+    
+    @Override
+    public String toString(){
+        return "HasQuarterState";
     }
     
 }

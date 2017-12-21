@@ -37,4 +37,9 @@ public class SoldOutState implements State{
         System.out.println("Sorry, we`re sold out");
     }
     
+    @Override
+    public String toString(){
+        return "SoldOutState";
+    }
+    
 }

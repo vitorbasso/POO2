@@ -9,13 +9,13 @@ package cap10poo2;
  *
  * @author vitor
  */
-public class SoldState implements State{
+public class WinnerState implements State{
+    
     GumballMachine gumballMachine;
     
-    public SoldState(GumballMachine gumballMachine){
+    public WinnerState(GumballMachine gumballMachine){
         this.gumballMachine = gumballMachine;
     }
-    
     
     @Override
     public void insertQuarter(){
@@ -34,18 +34,28 @@ public class SoldState implements State{
     
     @Override
     public void dispense(){
-        gumballMachine.releaseBall();
-        if(gumballMachine.getCount() > 0){
-            gumballMachine.setState(gumballMachine.getNoQuarterState());
-        }else{
-            System.out.println("Oops, out of gumballs!");
+        System.out.println("YOU`RE A WINNER! You get two gumballs for your quarter!");
+        if(gumballMachine.getCount() <= 0){
             gumballMachine.setState(gumballMachine.getSoldOutState());
+        }else{
+            gumballMachine.releaseBall();
+            if(gumballMachine.getCount() > 0){
+                gumballMachine.releaseBall();
+                if(gumballMachine.getCount() > 0){
+                    gumballMachine.setState(gumballMachine.getNoQuarterState());
+                }else{
+                    gumballMachine.setState(gumballMachine.getSoldOutState());
+                }
+            }else{
+                System.out.println("Oops, out of gumballs!");
+                gumballMachine.setState(gumballMachine.getSoldOutState());
+            }
         }
     }
     
     @Override
     public String toString(){
-        return "SoldState";
+        return "WinnerState";
     }
     
 }
