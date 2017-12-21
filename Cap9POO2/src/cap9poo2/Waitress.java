@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cap9poo2;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -11,29 +12,21 @@ import java.util.Iterator;
  * @author vitor
  */
 public class Waitress {
-    Menu pancakeMenu;
-    Menu dinerMenu;
-    Menu cafeMenu;
     
-    public Waitress(Menu pancakeMenu, Menu dinerMenu, Menu cafeMenu){
-        this.pancakeMenu = pancakeMenu;
-        this.dinerMenu = dinerMenu;
-        this.cafeMenu = cafeMenu;
+    ArrayList<Menu> menus;
+    
+    public Waitress(ArrayList<Menu> menus){
+        this.menus = menus;
     }
     
     public void printMenu(){
-        Iterator pancakeIterator = pancakeMenu.createIterator();
-        Iterator dinerIterator = dinerMenu.createIterator();
-        Iterator cafeIterator = cafeMenu.createIterator();
         
-        System.out.println("MENU\n----\nBREAKFAST");
-        printMenu(pancakeIterator);
+        Iterator menusIterator= menus.iterator();
         
-        System.out.println("\nLUNCH");
-        printMenu(dinerIterator);
-        
-        System.out.println("\nDINNER");
-        printMenu(cafeIterator);
+        while(menusIterator.hasNext()){
+            Menu menu = (Menu) menusIterator.next();
+            printMenu(menu.createIterator());
+        }
         
     }
     

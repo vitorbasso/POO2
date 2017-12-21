@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cap9poo2;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,9 +19,14 @@ public class Cap9POO2 {
         Menu pancakeHouseMenu = new PancakeHouseMenu();
         Menu dinerMenu = new DinerMenu();
         Menu cafeMenu = new CafeMenu();
+        ArrayList<Menu> menus = new ArrayList<Menu>();
+        
+        menus.add(pancakeHouseMenu);
+        menus.add(dinerMenu);
+        menus.add(cafeMenu);
         
         
-        Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu, cafeMenu);
+        Waitress waitress = new Waitress(menus);
         
         waitress.printMenu();
         
