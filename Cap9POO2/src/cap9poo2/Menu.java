@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package cap9poo2;
+import java.util.Iterator;
 
 /**
  *
  * @author vitor
  */
-public interface Iterator {
-    public boolean hasNext();
-    public Object next();
+public interface Menu {
+    public Iterator createIterator();
 }

@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package cap9poo2;
+import java.util.Iterator;
 
 /**
  *
  * @author vitor
  */
-public class DinerMenu {
+public class DinerMenu implements Menu{
     
     static final int MAX_ITEMS = 6;
     

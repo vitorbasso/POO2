@@ -5,12 +5,13 @@
  */
 package cap9poo2;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
  * @author vitor
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
     
     ArrayList<MenuItem> menuItems;
     
@@ -38,7 +39,7 @@ public class PancakeHouseMenu {
     }
     
     public Iterator createIterator(){
-        return new PancakeMenuIterator(menuItems);
+        return menuItems.iterator();
     }
     
 }

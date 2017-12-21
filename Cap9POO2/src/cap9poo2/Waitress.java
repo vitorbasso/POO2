@@ -4,14 +4,15 @@
  * and open the template in the editor.
  */
 package cap9poo2;
+import java.util.Iterator;
 
 /**
  *
  * @author vitor
  */
 public class Waitress {
-    PancakeHouseMenu pancakeMenu;
-    DinerMenu dinerMenu;
+    Menu pancakeMenu;
+    Menu dinerMenu;
     
     public Waitress(PancakeHouseMenu pancakeMenu, DinerMenu dinerMenu){
         this.pancakeMenu = pancakeMenu;
